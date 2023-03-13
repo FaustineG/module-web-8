@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  font-family: Montserrat;
+  --nav-height: 80px;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero {
+  display: flex;
+  height: calc(100vh - var(--nav-height));
+}
+
+.hero__article {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+  justify-content: center;
+}
+
+.hero__img {
+  width: 50%;
+}
+
+nav {
+  height: var(--nav-height);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__links a{
+    text-decoration: none;
+}
