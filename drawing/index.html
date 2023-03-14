@@ -8,11 +8,37 @@
   </head>
   <body>
     <canvas id="my-canvas" width="500" height="500"> </canvas>
+
+    <aside>
+      <select id="my-shape">
+        <option value="circle">Circle</option>
+        <option value="square">Square</option>
+        <option value="triangle">Triangle</option>
+      </select>
+
+      <input type="color" id="my-color" />
+    </aside>
   </body>
   <script src="./script.js"></script>
   <style>
+    body {
+      display: flex;
+    }
+
     canvas {
       border: 1px solid black;
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap:10px;
+      padding: 10px;
+    }
+
+    select{
+        padding: 5px;
+        border-radius: 5px;
     }
   </style>
 </html>

@@ -1,31 +1,50 @@
 canvas = document.getElementById("my-canvas");
 ctx = canvas.getContext("2d");
-
+const shapeSelectorElement = document.getElementById("my-shape");
+const colorSelectorElement = document.getElementById("my-color");
+const SHAPE_SIZE = 100;
+    
 function drawCircle(x, y, color) {
   ctx.fillStyle = color;
+
   ctx.beginPath();
   ctx.arc(x, y, 50, 0, Math.PI * 2, true);
   ctx.fill();
 }
 
 function drawSquare(x, y, color) {
-  side = 100;
-  half_side = side / 2;
+  ctx.fillStyle = color;
 
   ctx.beginPath();
-  ctx.fillStyle = color;
-  ctx.fillRect(x - half_side, y - half_side, side, side);
+  ctx.fillRect(x - SHAPE_SIZE / 2, y - SHAPE_SIZE / 2, side, side);
+  ctx.fill();
+}
 
-  ctx.stroke();
+function drawTriangle(x, y, color) {
+  ctx.fillStyle = color;
+
+  ctx.beginPath();
+  ctx.moveTo(x - SHAPE_SIZE / 2, y - SHAPE_SIZE / 2);
+  ctx.lineTo(x - SHAPE_SIZE / 2, y + SHAPE_SIZE );
+  ctx.lineTo(x + SHAPE_SIZE, y + SHAPE_SIZE);
+  ctx.fill();
+  ctx.closePath();
 }
 
 function onClick(e) {
   const { x, y } = e;
-  drawSquare(x, y, "green");
-  console.log(e.x, e.y);
+  switch (shapeSelectorElement.value) {
+    case "square":
+      drawSquare(x, y, colorSelectorElement.value);
+      break;
+    case "circle":
+      drawCircle(x, y, colorSelectorElement.value);
+      break;
+    case "triangle":
+      drawTriangle(x, y, colorSelectorElement.value);
+      break;
+  }
+  console.log(x, y);
 }
 
 canvas.addEventListener("click", onClick);
-
-drawSquare(100, 100, "red");
-drawCircle(150, 150, "blue");
