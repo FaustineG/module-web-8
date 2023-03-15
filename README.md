@@ -15,6 +15,9 @@
 
 [Slides](https://docs.google.com/presentation/d/1CHfvUrjivQgOeZRUyMrAceleEy5ygVtHeAtEYfmsEM0/edit?usp=sharing)
 
+[Evaluation de la dernière promo](https://docs.google.com/document/d/1gjxzQvZcFkeJ1cXjT5U745vwr47FcTTbGxcXGNIBj9Q/edit?usp=sharing)
+/!\ La promo précédente avait débuté par ce module, et avait donc des attendus moins importants en terme d'algorithmie et de programmation. De plus, ils n'avaient pas encore vu Git, d'ou l'envoi de zip par email :)
+
 ## A savoir faire pour l'évaluation
 
 - Faire une page HTML organisée clairement et logiquement, en utilisant les balises appropriées.
