@@ -1,0 +1,18 @@
+#quotes-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.quote::before,
+.quote::after {
+  content: '"';
+}
+
+.information {
+  text-align: right;
+  font-size: small;
+}
