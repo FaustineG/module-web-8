@@ -1,0 +1,2 @@
+Attention ! Ce TP ne fonctionnera pas sans une modification dans votre code de server Java.
+Dans votre `PetClinicController`, ajoutez l'annotation `@CrossOrigin` avant tous les mappings de requêtes (allClinics, getClinic, etc.)
